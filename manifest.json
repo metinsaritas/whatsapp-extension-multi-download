@@ -1,0 +1,28 @@
+{
+    "name": "Whatsapp Multi Download",
+    "version": "1.0",
+    "description": "You can download multiple image files as ZIP file",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/"
+            ],
+            "js": [
+                "injector.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+        "lib/jquery.min.js",
+        "lib/jszip.min.js",
+        "lib/FileSaver.min.js",
+        "content.js"
+    ],
+    "browser_action": {
+        "default_title": "Whatsapp Multi Download",
+        "default_icon": "icons/icon.png"
+    }
+}
